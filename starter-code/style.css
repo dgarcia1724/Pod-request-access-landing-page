@@ -1,0 +1,299 @@
+:root {
+  --Green: #54e6af;
+  --Green-light: #b3ffe2;
+  --White: #ffffff;
+  --Lightest: #c2cbe5;
+  --Light: #5a668a;
+  --Dark: #2c344b;
+  --Darkest: #121725;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Chivo", sans-serif;
+}
+
+body {
+  background: url(./assets/mobile/image-host.jpg) no-repeat, var(--Dark);
+  height: 100vh;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  color: white;
+  font-size: 1.5rem;
+}
+
+.mic {
+  display: none;
+}
+
+header {
+  display: grid;
+  place-items: center;
+}
+
+.logo {
+  margin: 6.2rem auto 5.7rem;
+}
+
+main {
+  padding: 0 2.4rem;
+
+  text-align: center;
+}
+
+main h1 {
+  margin-bottom: 1.6rem;
+
+  font-size: 2.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 3.8rem;
+}
+
+main h1 span {
+  color: var(--Green);
+}
+main p {
+  color: var(--Lightest);
+  line-height: 2.5rem;
+}
+
+.bigMic {
+  display: none;
+}
+
+main .companyLogos {
+  margin-top: 3.3rem;
+  margin-bottom: 4.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .companyLogos * {
+  width: 6rem;
+}
+
+.bigEmailSection {
+  display: none;
+}
+
+.emailSection input {
+  margin-bottom: 1.6rem;
+
+  display: block;
+  width: 100%;
+
+  padding: 0.9rem;
+  padding-left: 3.2rem;
+  border-radius: 28px;
+  border: none;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  background-color: var(--Dark);
+  color: var(--White);
+}
+
+.emailSection button {
+  width: 100%;
+
+  padding: 0.9rem;
+  border-radius: 28px;
+  border: none;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  background-color: var(--Green);
+  color: var(--Darkest);
+}
+
+.emailSection button:hover,
+.emailSection button:hover {
+  background-color: var(--Green-light);
+}
+
+.dots {
+  display: none;
+}
+.newDots {
+  display: none;
+}
+
+@media (min-width: 45rem) {
+  body {
+    background: var(--Darkest);
+  }
+
+  .mic {
+    display: block;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 70vh;
+
+    background: url(./assets/tablet/image-host.jpg);
+    background-size: cover;
+    position: absolute;
+    z-index: -10;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logo {
+    margin: 5rem 0 10rem 4rem;
+  }
+
+  main {
+    background: var(--Darkest);
+    margin-right: 10rem;
+    padding: 5rem 4rem 1rem;
+
+    text-align: left;
+  }
+
+  main h1 {
+    margin-bottom: 1.6rem;
+
+    font-size: 4.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 5.6rem;
+  }
+
+  main h1 span {
+    color: var(--Green);
+  }
+  main p {
+    margin-bottom: 3rem;
+    margin-right: 15rem;
+
+    line-height: 2.8rem;
+    font-size: 1.8rem;
+  }
+
+  main .companyLogos {
+    margin-top: 3.3rem;
+    margin-bottom: 4.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  main .companyLogos * {
+    width: 10rem;
+  }
+
+  .emailSection {
+    display: none;
+  }
+
+  .bigEmailSection {
+    display: inline-block;
+    position: relative;
+  }
+
+  .bigEmailSection input {
+    display: block;
+    min-width: 44rem;
+
+    padding: 1.4rem;
+    padding-left: 3.2rem;
+    border-radius: 28px;
+    border: none;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    background-color: var(--Dark);
+    color: var(--White);
+  }
+
+  .bigEmailSection button {
+    position: absolute;
+
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0.5rem;
+
+    width: 15rem;
+
+    padding: 0.9rem;
+    border-radius: 28px;
+    border: none;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    background-color: var(--Green);
+    color: var(--Darkest);
+  }
+
+  .bigEmailSection button:hover,
+  .bigEmailSection button:hover {
+    background-color: var(--Green-light);
+  }
+
+  .dots {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+  }
+}
+
+@media (min-width: 60rem) {
+  main {
+    margin-left: 5%;
+    margin-right: 25%;
+  }
+
+  .mic {
+    display: none;
+  }
+
+  .bigMic {
+    display: block;
+    top: 10%;
+    right: 0;
+    width: 70vw;
+    height: 69vh;
+
+    background: url(./assets/desktop/image-host.jpg);
+    background-size: cover;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .dots {
+    display: none;
+  }
+
+  .newDots {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+  }
+}
+
+/* Javascript */
+.errorMessage {
+  margin-left: 3rem;
+  color: red;
+}
